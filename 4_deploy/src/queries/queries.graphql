@@ -1,0 +1,63 @@
+query getStreams {
+    activeUser {
+        id
+        projects {
+            items {
+                id
+                name
+                description
+                versions {
+                    items {
+                        previewUrl
+                    }
+                    totalCount
+                }
+            }
+        }
+    }
+}
+
+query getUser {
+    activeUser {
+        id
+        email
+        name
+        bio
+        avatar
+    }
+}
+
+query getLatestVersion($projectId: String!, $modelId: String!) {
+    project(id: $projectId) {
+        id
+        model(id: $modelId) {
+            id
+            versions(limit: 1) {
+                items {
+                    id
+                    referencedObject
+                }
+            }
+        }
+    }
+}
+
+query getProject($projectId: String!) {
+    project(id: $projectId) {
+        id
+        name
+        models {
+            items {
+                name
+                id
+            }
+        }
+    }
+}
+
+query getProjectName($projectId: String!) {
+    project(id: $projectId) {
+        id
+        name
+    }
+}

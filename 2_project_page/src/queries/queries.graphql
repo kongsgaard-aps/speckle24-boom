@@ -1,0 +1,13 @@
+query getStreams {
+    # TODO - Create Streams Query
+}
+
+query getUser {
+    activeUser {
+        id
+        email
+        name
+        bio
+        avatar
+    }
+}

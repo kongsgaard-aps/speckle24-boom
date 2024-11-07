@@ -1,0 +1,4 @@
+
+query getUser {
+    # TODO - Create user query
+}
