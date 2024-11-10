@@ -30,6 +30,7 @@ export const useFetchSpeckle = ({ variables, skip }: useFetchSpeckleProps) => {
     setError(undefined)
     setData(undefined)
     // TODO - Create ObjectLoader object
+    // https://www.npmjs.com/package/@speckle/objectloader
 
     const filterSpeckleObject = (speckleData: SpeckleCollection) => {
       const excludedElements = [
